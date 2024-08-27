@@ -1,0 +1,36 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-end;
+    background-color: black;
+    color: #fff;  
+    width: 100%;
+    margin-top: auto;
+    
+    h2 {
+        display: flex;
+        flex-direction: row;
+        font-style : Medium;
+        Font-size: 1.5em; 
+        letter-spacing: 10%;
+        color: #fff;
+        
+        .kasaIconBlanc {
+            filter: brightness(100);
+            height: 1em; 
+            width: auto; 
+        }
+    }
+    p {
+        font-style : Medium;
+        Font-size: 0.5em;
+    }
+    
+    
+}
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 0;
+    }
+}

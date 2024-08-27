@@ -1,0 +1,120 @@
+.collapse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  
+    button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 40px;
+      border-radius: 5px;
+      background-color: #FF6060;
+      color: #fff;
+      border: none;
+  
+      &.arrow-open {
+        background-color: #FF6060;
+  
+        img {
+          transform: rotate(90deg);
+          max-height: 15px;
+        }
+      }
+  
+      &.arrow-closed {
+        transform: rotate(0deg);
+  
+        img {
+          transform: rotate(-90deg);
+          max-height: 15px;
+        }
+      }
+    }
+  
+    .collapseText__box {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1em;
+      border-radius: 5px;
+      padding-block: 2%;
+      &.box-open {
+        background-color: #f6f6f6;
+        max-height: 400px;
+        animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      }
+      li {
+        padding-left: 3%;
+      }
+
+      p{
+        padding-left: 3%;
+        padding-right: 3%;
+      }
+    }
+  }
+  
+  .collapse__arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 10px;
+  
+    h3 {
+      margin: 0;
+    }
+  
+    img {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+  
+  .box-closed {
+    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: height 5.5s ease-in-out;
+  }
+  
+  .box-open {
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    overflow: hidden;
+    height: auto;
+    transform: translateY(-10px);
+    width: 100%;
+    animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  
+  .arrow-closed {
+    img {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .arrow-open {
+    img {
+      transform: rotate(180deg);
+    }
+  }
+  .box-open:hover{
+    cursor: pointer;
+}
+
+  @media screen and (max-width: 768px) {
+    .collapse {
+      width: 100%;
+    }
+  }  

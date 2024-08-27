@@ -1,0 +1,47 @@
+.cardPreview {
+  width: auto;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+  border-radius: 25px;
+  img {
+    filter: brightness(70%);
+  }
+  .cardCover {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+  }
+  
+  .cardTitle {  
+    width: 50%;
+    display: block;
+    position: absolute;
+    bottom : 3px;
+    left: 10px;
+    font-size: 1em;;
+    font-weight: 500;
+    color: #fff;
+    z-index: 1;
+  }
+}
+
+.cardPreview:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px){  
+  .cardPreview{
+    .cardCover {
+      width: 100%;
+      height: 255px;
+    }
+    .cardTitle {  
+      width: 50%;
+      font-size: 1em;;
+      z-index: 1;
+    }
+  }
+}

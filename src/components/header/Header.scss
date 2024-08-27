@@ -1,0 +1,46 @@
+.Header {    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    
+    .kasaIcon { 
+        height: 2.5em; 
+        width: auto; 
+    }
+    .navigationLink {
+        display: flex;
+        justify-content: flex-end;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        li { 
+            display: inline-block;
+        }
+        
+        a {
+            display: block;
+            padding: 6px 12px;
+            text-decoration: none;
+        }
+    }    
+}
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+@media screen and (max-width : 768px) {
+    .Header {
+        .kasaIcon { 
+            height: 2em; 
+            width: auto; 
+        }  
+    }  
+}
