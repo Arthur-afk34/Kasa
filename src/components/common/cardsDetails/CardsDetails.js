@@ -46,6 +46,10 @@ function CardsDetails() {
                 <div className="title-location">
                     <h2 className="logs-title">{lot.title}</h2>
                     <div className="logs-location">{lot.location}</div>
+                    <div className="logs-tags">{
+                    lot.tags.map((tags)=>
+                    <button key={tags}>{tags}</button> )
+                    }</div> 
                 </div>
                 <div className="host-rating">
                     <div className="logs-host">
@@ -55,10 +59,10 @@ function CardsDetails() {
                     <div className="rating"> {renderStars(lot.rating)}</div>
                 </div>
                 </section> 
-                <div className="logs-tags">{
+                {/* <div className="logs-tags">{
                 lot.tags.map((tags)=>
                 <button key={tags}>{tags}</button> )
-                }</div> 
+                }</div>  */}
                 <section className="homeCollapse">
                 
                 <div className="logs-description">
